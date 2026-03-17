@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbearia - Login Admin</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body class="login-page">
+    <div class="login-container">
+      <div class="login-card">
+        <div class="login-header">
+          <div class="login-logo">
+            <img src="../assets/logo_ntbarbs.jpg" alt="Logo Barbearia" />
+          </div>
+          <h1 class="login-title">Painel Administrativo</h1>
+          <p class="login-desc">Acesse o painel de controle da barbearia</p>
+        </div>
+
+        <form id="login-form">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <div class="input-wrapper">
+              <i data-lucide="mail" class="input-icon"></i>
+              <input
+                type="email"
+                id="email"
+                placeholder="admin@barbearia.com"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="input-group">
+            <label for="password">Senha</label>
+            <div class="input-wrapper">
+              <i data-lucide="lock" class="input-icon"></i>
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
+            </div>
+          </div>
+
+          <button type="submit" id="btn-login" class="btn-primary">
+            Entrar
+          </button>
+
+          <a href="#" class="forgot-password">Esqueci minha senha</a>
+        </form>
+      </div>
+    </div>
+    <script src="login.js"></script>
+  </body>
+</html>

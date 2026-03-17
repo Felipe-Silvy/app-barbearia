@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Barbearia Premium - Início</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+  <body>
+    <header>
+      <img
+        src="assets/logo_ntbarbs.jpg"
+        alt="Logo Barbearia"
+        class="header-logo"
+      />
+      <div>
+        <div class="header-title">NT.BARBER</div>
+        <div class="header-subtitle">
+          Estilo, precisão e tradição em cada corte.
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h2>Bem-vindo!</h2>
+        <p>Agende seu horário com nossos profissionais experientes</p>
+        <a href="agendar.html" class="btn-primary">Agendar Agora</a>
+      </section>
+
+      <section>
+        <h3 class="section-title">Nosso Espaço</h3>
+        <div class="gallery-grid" id="gallery-container"></div>
+      </section>
+
+      <section>
+        <h3 class="section-title">
+          Nossos Trabalhos
+          <a href="#" class="link-ver-todos"
+            >Ver todos <i data-lucide="chevron-right" width="16" height="16"></i
+          ></a>
+        </h3>
+        <div class="portfolio-grid" id="portfolio-container"></div>
+      </section>
+
+      <section>
+        <div class="service-list" id="services-container"></div>
+      </section>
+
+      <section>
+        <h3 class="section-title">Informações</h3>
+        <div class="card info-list">
+          <div class="info-item">
+            <i data-lucide="map-pin" width="20" height="20"></i>
+            <div>
+              <div class="info-title">Endereço</div>
+              <div class="info-desc">Rua das Flores, 123 - Centro</div>
+            </div>
+          </div>
+          <div class="info-item">
+            <i data-lucide="clock" width="20" height="20"></i>
+            <div>
+              <div class="info-title">Horário de Funcionamento</div>
+              <div class="info-desc">
+                Seg - Sex: 9h às 19h<br />Sábado: 9h às 17h
+              </div>
+            </div>
+          </div>
+          <div class="info-item">
+            <i data-lucide="message-circle" width="20" height="20"></i>
+            <div>
+              <div class="info-title">WhatsApp</div>
+              <div class="info-desc">
+                <a
+                  href="https://wa.me/5547991891312"
+                  target="_blank"
+                  class="social-link"
+                  >(47) 99189-1312</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="info-item">
+            <i data-lucide="Instagram" width="20" height="20"></i>
+            <div>
+              <div class="info-title">Instagram</div>
+              <div class="info-desc">
+                <a
+                  href="https://www.instagram.com/nt_barbss/"
+                  class="social-link"
+                  >nt_barbss</a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <nav class="bottom-nav">
+      <a href="index.html" class="nav-item active">
+        <i data-lucide="home" width="24" height="24"></i>
+        Início
+      </a>
+      <a href="agendar.html" class="nav-item">
+        <i data-lucide="calendar" width="24" height="24"></i>
+        Agendar
+      </a>
+      <a href="agendamentos.html" class="nav-item">
+        <i data-lucide="clock" width="24" height="24"></i>
+        Agendamentos
+      </a>
+    </nav>
+
+    <script src="script.js"></script>
+  </body>
+</html>

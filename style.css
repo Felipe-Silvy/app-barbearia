@@ -1,0 +1,672 @@
+:root {
+  --neutral-50: #fafafa;
+  --neutral-100: #f5f5f5;
+  --neutral-200: #e5e5e5;
+  --neutral-500: #737373;
+  --neutral-600: #525252;
+  --neutral-700: #404040;
+  --neutral-800: #262626;
+  --neutral-900: #171717;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: var(--neutral-900);
+  max-width: 480px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 80px;
+  min-height: 100vh;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Cabeçalho */
+header {
+  background-color: #111;
+  /* border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px; */
+  color: white;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  object-fit: cover;
+}
+
+.header-title {
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.header-subtitle {
+  font-size: 12px;
+  color: #a3a3a3;
+}
+
+/* Container Principal */
+main {
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to right, var(--neutral-800), var(--neutral-700));
+  border-radius: 12px;
+  padding: 24px;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.hero p {
+  color: var(--neutral-200);
+  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 1.5;
+}
+
+.btn-primary {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  background-color: white;
+  color: var(--neutral-900);
+  text-align: center;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: var(--neutral-200);
+  color: var(--neutral-700);
+}
+
+/* Títulos de Seção */
+.section-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: var(--neutral-900);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.link-ver-todos {
+  font-size: 14px;
+  color: var(--neutral-600);
+  font-weight: 400;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Galeria e Portfólio */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 8px;
+}
+
+.gallery-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.portfolio-grid img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+/* Serviços (Cards) */
+.service-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  border: 1px solid var(--neutral-200);
+  border-radius: 12px;
+  padding: 16px;
+  background-color: white;
+}
+
+.service-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.service-info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.icon-box {
+  width: 48px;
+  height: 48px;
+  background-color: var(--neutral-100);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--neutral-700);
+}
+
+.service-name {
+  font-weight: 600;
+  font-size: 15px;
+  margin-bottom: 4px;
+}
+
+.service-duration {
+  font-size: 13px;
+  color: var(--neutral-500);
+}
+
+.service-price {
+  font-weight: 700;
+  font-size: 15px;
+}
+
+/* Informações */
+.info-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.info-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.info-item i {
+  color: var(--neutral-600);
+  margin-top: 2px;
+}
+
+.info-title {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: var(--neutral-900);
+}
+
+.info-desc {
+  font-size: 13px;
+  color: var(--neutral-600);
+  line-height: 1.4;
+}
+
+/* Menu Inferior */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 480px;
+  background-color: white;
+  border-top: 1px solid var(--neutral-200);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0 24px 0;
+  z-index: 100;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  color: var(--neutral-500);
+  text-decoration: none;
+  font-size: 11px;
+  flex: 1;
+}
+
+.nav-item.active {
+  color: var(--neutral-900);
+}
+
+.social-link {
+  text-decoration: underline;
+  color: inherit;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  transform: scale(0.9); /* O ícone "afunda" levemente */
+  color: #171717; /* Fica preto intenso no toque */
+  opacity: 0.7;
+}
+
+/* ------------------------------------------------ AGENDAR ---------------------------------------------------------------------- */
+
+/* --- TOAST WARNING --- */
+.toast-container {
+  position: fixed;
+  bottom: 80px; /* Acima da nav-bottom */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1000;
+  width: 90%;
+  max-width: 350px;
+  background: #171717; /* Mesmo tom de preto do seu sistema */
+  color: white;
+  padding: 12px 16px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease-out;
+}
+
+.toast-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.toast-content i {
+  width: 18px;
+}
+
+.hidden {
+  display: none !important;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translate(-50%, 20px);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, 0);
+    opacity: 1;
+  }
+}
+
+/* Estilos do Agendamento */
+.stepper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 25px;
+}
+.step {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #a3a3a3;
+  font-size: 13px;
+  flex-shrink: 0;
+}
+.step.active {
+  color: #171717;
+  font-weight: 600;
+}
+.step-num {
+  width: 24px;
+  height: 24px;
+  background: #e5e5e5;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+}
+.active .step-num {
+  background: #171717;
+}
+.step-line {
+  flex-grow: 1;
+  height: 1px;
+  background: #e5e5e5;
+  margin: 0 10px;
+}
+
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+.radio-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.radio-card {
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+.radio-card.selected {
+  border-color: #171717;
+  border: 2px solid #171717;
+  background: #efefef;
+}
+
+.btn-primary {
+  background: #171717;
+  color: white;
+  border: none;
+  padding: 15px;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 600;
+  cursor: pointer;
+}
+.btn-outline {
+  background: white;
+  border: 1px solid #e5e5e5;
+  padding: 15px;
+  border-radius: 8px;
+  flex: 1;
+  cursor: pointer;
+}
+
+.input-field {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #f9f9f9;
+}
+.hidden {
+  display: none !important;
+}
+.card {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px;
+}
+.time-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 15px;
+}
+.time-slot {
+  padding: 8px;
+  border: 1px solid #e5e5e5;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 14px;
+}
+.time-slot.selected {
+  border-color: #171717;
+  border: 2px solid #171717;
+  background: #efefef;
+}
+/* Centraliza o container principal do flatpickr */
+.flatpickr-calendar.inline {
+  margin: 0 auto !important; /* Centraliza horizontalmente no card */
+  width: 100% !important;
+  max-width: 320px !important; /* Tamanho ideal para mobile */
+  box-shadow: none !important;
+  border: none !important;
+  background: transparent !important;
+}
+
+/* Garante que o container interno ocupe a largura toda */
+.flatpickr-innerContainer,
+.flatpickr-rContainer,
+.dayContainer {
+  width: 100% !important;
+  min-width: 100% !important;
+  max-width: 100% !important;
+}
+
+/* Ajusta o tamanho das células dos dias para preencherem o espaço */
+.flatpickr-day {
+  max-width: none !important;
+  flex-basis: 14.28% !important; /* Divide em 7 colunas iguais */
+}
+
+/* Remove a borda e ajusta o cabeçalho (Meses/Anos) */
+.flatpickr-months {
+  margin-bottom: 10px;
+}
+
+/* Melhora o destaque do dia selecionado para combinar com seu app */
+.flatpickr-day.selected {
+  background: #171717 !important;
+  border-color: #171717 !important;
+  color: #fff !important;
+}
+
+/* Estilo para o título do card de data */
+.card .section-title {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+/* ------------------------------------------------ PÁGINA AGENDAMENTOS  -------------------------------------- */
+
+/* Estado Vazio */
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 40px 20px;
+  margin-top: 40px;
+}
+.empty-icon-wrapper {
+  width: 64px;
+  height: 64px;
+  background: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+.empty-icon {
+  color: #a3a3a3;
+  width: 32px;
+  height: 32px;
+}
+.empty-state h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #171717;
+}
+.empty-state p {
+  color: #737373;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Lista e Cards de Agendamento */
+.bookings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.booking-card {
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px;
+  background: #fff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Header do Card */
+.booking-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.booking-date-title {
+  font-weight: 600;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+.booking-time {
+  color: #525252;
+  font-size: 14px;
+}
+.status-badge {
+  background: #dcfce7;
+  color: #166534;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 4px 10px;
+  border-radius: 100px;
+}
+
+/* Corpo do Card */
+.booking-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.booking-info-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #404040;
+  font-size: 14px;
+  font-weight: 500;
+}
+.booking-info-item i {
+  color: #737373;
+  width: 18px;
+}
+
+/* Botão de Excluir Lixeira */
+.btn-icon-danger {
+  background: none;
+  border: none;
+  color: #ef4444;
+  padding: 8px;
+  cursor: pointer;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s;
+}
+.btn-icon-danger:hover {
+  background: #fee2e2;
+}
+
+/* Rodapé do Card (Cliente) */
+.booking-client {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #f5f5f5;
+}
+.booking-client-label {
+  font-size: 12px;
+  color: #737373;
+  margin-bottom: 4px;
+}
+.booking-client-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #171717;
+}
+.booking-client-phone {
+  font-size: 14px;
+  color: #525252;
+}
+
+/* Modal de Exclusão */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  padding: 20px;
+}
+.modal-content {
+  background: white;
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.btn-danger {
+  background: #dc2626;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 600;
+  flex: 1;
+  cursor: pointer;
+}
+.btn-danger:hover {
+  background: #b91c1c;
+}

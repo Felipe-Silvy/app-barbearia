@@ -1,0 +1,148 @@
+/* RESET GERAL */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #171717;
+  line-height: 1.5;
+}
+
+.login-page {
+  background: #171717;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+.login-container {
+  width: 100%;
+  max-width: 400px;
+}
+
+.login-card {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 32px 24px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.login-logo {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 16px auto;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid #737373;
+}
+
+.login-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.login-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: #171717;
+}
+
+.login-desc {
+  font-size: 14px;
+  color: #737373;
+  margin-top: 4px;
+}
+
+/* FORMULÁRIO */
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  display: block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #171717;
+}
+
+/* O segredo para alinhar lado a lado */
+.input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+/* Forçando o ícone a ficar fixo na esquerda */
+.input-icon {
+  position: absolute;
+  left: 14px;
+  width: 18px !important; /* Força o tamanho do Lucide */
+  height: 18px !important;
+  color: #a3a3a3;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.input-wrapper input {
+  width: 100%;
+  height: 45px;
+  /* O padding-left de 42px garante que o texto comece DEPOIS do ícone */
+  padding: 0 12px 0 42px !important;
+  border: 1px solid #e5e5e5;
+  border-radius: 8px;
+  background: #f9fafb;
+  font-size: 14px;
+  outline: none;
+  transition: all 0.2s;
+}
+
+.input-wrapper input:focus {
+  border-color: #171717;
+  background: #ffffff;
+  box-shadow: 0 0 0 2px rgba(23, 23, 23, 0.05);
+}
+
+.btn-primary {
+  width: 100%;
+  background: #171717;
+  color: white;
+  padding: 14px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s;
+}
+
+.btn-primary:hover {
+  background-color: #262626;
+}
+
+.forgot-password {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #525252;
+  text-decoration: none;
+}
+
+.forgot-password:hover {
+  color: #171717;
+}
